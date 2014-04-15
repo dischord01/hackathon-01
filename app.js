@@ -19,7 +19,8 @@ var homeController = require('./controllers/home');
 var userController = require('./controllers/user');
 var apiController = require('./controllers/api');
 var contactController = require('./controllers/contact');
-
+var portalController = require('./controllers/portal');
+var alfrescoController = require('./controllers/alfresco');
 /**
  * API keys + Passport configuration.
  */
@@ -102,6 +103,7 @@ app.use(express.errorHandler());
  */
 
 app.get('/', homeController.index);
+app.get('/escape-velocity', homeController.escapeVelocity);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
@@ -139,6 +141,9 @@ app.get('/api/twitter', passportConf.isAuthenticated, passportConf.isAuthorized,
 app.get('/api/venmo', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getVenmo);
 app.post('/api/venmo', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.postVenmo);
 app.get('/api/linkedin', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getLinkedin);
+/* Sollar Edits */
+app.get('/portal', passportConf.isAuthenticated, portalController.getPortal);
+app.get('/alfresco', passportConf.isAuthenticated, alfrescoController.getAlfresco);
 
 /**
  * OAuth routes for sign-in.
