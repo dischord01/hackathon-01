@@ -37,13 +37,21 @@ var passportConf = require('./config/passport');
 var app = express();
 
 /**
- * Mongoose configuration.
+ * Mongoose localhost configuration.
  */
 
-mongoose.connect(secrets.db);
+// mongoose.connect(secrets.db);
+// mongoose.connection.on('error', function() {
+//   console.error('✗ MongoDB Connection Error. Please make sure MongoDB is running.');
+// });
+
+// Docker linking Connection to Mongo Container
+var mongo_link = 'mongodb://' + process.env.MONGO_PORT_27017_TCP_ADDR + ':' + process.env.MONGO_PORT_27017_TCP_PORT + '/testdb';
+mongoose.connect(mongo_link);
 mongoose.connection.on('error', function() {
   console.error('✗ MongoDB Connection Error. Please make sure MongoDB is running.');
 });
+
 
 /**
  * Express configuration.
