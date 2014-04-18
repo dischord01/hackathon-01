@@ -75,10 +75,20 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(expressValidator());
 app.use(express.methodOverride());
+
+//Local Mongo
+// app.use(express.session({
+//   secret: secrets.sessionSecret,
+//   store: new MongoStore({
+//     url: secrets.db,
+//     auto_reconnect: true
+//   })
+
+//Docker Linked Mongo Container
 app.use(express.session({
   secret: secrets.sessionSecret,
   store: new MongoStore({
-    url: secrets.db,
+    db: mongoose.connection.db,
     auto_reconnect: true
   })
 }));
