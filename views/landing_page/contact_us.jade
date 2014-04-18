@@ -1,0 +1,84 @@
+doctype html
+html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title #{title} | Project 01
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    //
+       stylesheets 
+    link(rel='stylesheet', type='text/css', href='css/compiled/theme.css')
+    //
+       javascript 
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(src='js/bootstrap/bootstrap.min.js')
+    script(src='js/vendor/jquery.validate.min.js')
+    script(src='js/theme.js')
+    //if lt IE 9
+      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+  body#contact-us
+    // Navigation Normal 
+    include partials/lp_navigation_normal
+    //Content
+    
+    //Body 
+    #map(style='height: 400px;')
+      iframe(width='100%', height='400', frameborder='0', scrolling='no', marginheight='0', marginwidth='0', src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3099.31735795432!2d-77.410459!3d39.03088299999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b63997ce79082f%3A0x3d03114aa6b0e34a!2sInnovative+Management+Concepts!5e0!3m2!1sen!2sus!4v1397658171438')
+      .marker-wrapper
+        .marker-icon
+        .marker
+      #directions
+        p Get directions to our office
+        form
+          .form-group
+            input.form-control(type='text', placeholder='Write your zip code')
+          button.button.button-small(type='submit')
+            span Get directions
+    #info
+      .container
+        .row
+          .col-md-8.message
+            h3 Send us a message
+            p
+              | You can contact us with anything related to React.
+              br
+              | We'll get in touch with you as soon as possible.
+            form#contact-form(role='form', method='post')
+              .form-group
+                label(for='name') Your name
+                input#name.form-control(type='text', name='name')
+              .form-group
+                label(for='email') Email address
+                input#email.form-control(type='email', name='email')
+              .form-group
+                label(for='phone') Phone
+                input#phone.form-control(type='text', name='phone')
+              .form-group
+                label(for='message') Your message
+                textarea#message.form-control(name='message', rows='6')
+              .submit
+                input.button.button-small(type='submit', value='Email us')
+          .col-md-4.contact
+            .address
+              h3 Our Address
+              p
+                | The Old Road Willington,
+                br
+                | 7 Kings Road,
+                br
+                | Southshore, 64890
+            .phone
+              h3 By Phone
+              p
+                | 1-800-346-3344
+            .online-support
+              strong Looking for online support?
+              p
+                | Talk to us now with our online chat
+            .social
+              a.fb(href='#')
+                img(src='images/social/fb.png', alt='facebook')
+              a.tw(href='#')
+                img(src='images/social/tw.png', alt='twitter')
+    //Footer Normal
+    include partials/lp_footer_normal

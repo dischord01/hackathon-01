@@ -1,0 +1,181 @@
+doctype html
+html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title React - Bootstrap Theme
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    //
+       stylesheets 
+    link(rel='stylesheet', type='text/css', href='css/compiled/theme.css')
+    link(rel='stylesheet', type='text/css', href='css/vendor/font-awesome.css')
+    link(rel='stylesheet', type='text/css', href='css/vendor/icomoon.css')
+    //
+       javascript 
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(src='js/bootstrap/bootstrap.min.js')
+    script(src='js/theme.js')
+    //if lt IE 9
+      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+  body#blogpost
+    header.navbar.navbar-inverse.normal(role='banner')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-navbar-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='index.html') React
+        nav.collapse.navbar-collapse.bs-navbar-collapse(role='navigation')
+          ul.nav.navbar-nav
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Home alts
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='index.html') Home 1 (Static)
+                li
+                  a(href='index3.html') Home 2 (Sidebar menu)
+                li
+                  a(href='index4.html') Home 3 (Slider)
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Showcase
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='features.html') Features
+                li
+                  a(href='services.html') Services
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Pricing
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='pricing.html') Pricing charts
+                li
+                  a(href='charts.html') Comparison tables
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | More pages
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='aboutus.html') About us
+                li
+                  a(href='contactus.html') Contact us
+                li
+                  a(href='gallery.html') Gallery
+                li
+                  a(href='portfolio.html') Portfolio
+                li
+                  a(href='portfolio-item.html') Portfolio Item
+                li
+                  a(href='invoice.html') Invoice page
+                li
+                  a(href='timeline.html') Timeline Page
+                li
+                  a(href='docs.html') API Documentation
+                li
+                  a(href='support.html') Support
+                li
+                  a(href='coming-soon.html') Coming Soon
+                li
+                  a(href='status.html') Status
+                li
+                  a(href='signup.html') Sign Up & Sign In
+                li
+                  a(href='signup-rotate.html') Sign Up Miscellaneous
+                li
+                  a(href='404.html') 404 Page
+            li.active.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Blog
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='blog.html') Blog 
+                li
+                  a(href='blogpost.html') Blog post
+          ul.nav.navbar-nav.navbar-right.visible-md.visible-lg
+            li
+              a.button(href='signup.html') Sign up free
+    #blogpost-wrapper
+      .container
+        .row
+          .col-md-12
+            .main-pic
+              img.img-responsive(src='images/blogpost5.png', alt='blogpost')
+        .row
+          .col-md-10.post
+            .title
+              | A brief history of climate science gone wrong
+            .author
+              img.avatar(src='images/testimonials/testimonial3.jpg', alt='author')
+              | By Lawrence Stewart, August 16, 2013
+            .content
+              p
+                | I love making the stuff, that’s sort of the core of it. I love creating the stuff. It’s so satisfying to get from the beginning to the end, from a shaky nothing idea to something that’s well formed and the audience really likes. It’s like a drug: You keep trying to do it again and again and again. I’ve learned from experience that if you work harder at it, and apply more energy and time to it, and more consistency, you get a better result. It comes from the work.
+                br
+                | Functionality is so over-valued in design, and we’ve kept design very small in that way. Functionality is the sheer minimum. If your house burns down, what do you take? The cat in the window that you got from your mother, or the chair you have?
+              p
+                | Some people say design is about solving problems. Obviously designers solve problems but so do dentists. Design is about
+                a(href='#') cultural invention.
+              blockquote
+                p
+                  | “We’re all naturally curious when we’re eight years old. But as most people get older, they become less and less curious, so they ask other people to be curious for them. That’s what I do for a living.”
+                p.quote-author
+                  | Ron Miriello
+              p
+                | You have to roll up your sleeves and be a stonecutter before you can become a sculptor – command of craft always precedes art: apprentice, journeyman, master.
+                br
+                | It doesn’t matter one damn bit whether fashion is art or not. You don’t question whether an incredible chef is an artist or not – his cakes are delicious and that’s all that matters.
+              .divider
+              p
+                | If you want to set off and go develop some grand new thing, you don’t need millions of dollars of capitalization. You need enough pizza and Diet Coke to stick in your refrigerator, a cheap PC to work on and the dedication to go through with it.
+              p
+                | Well you’re in your little room and you’re working on something good but if it’s really good you’re gonna need a bigger room and when you’re in the bigger room you might not know what to do you might have to think of how you got started sitting in your little room.
+              p
+                img.img-responsive(src='images/slider/slide1.png', alt='slide')
+              p
+                | Chances are, unless I’m a designer, I don’t know what I want. All I know is I want something functional that looks good, is comparable with my competitors, and features constant colour schemes for branding.
+              p
+                | I’ll look at other designs that have already been created and ask for something similar. Hence, it is important that you can take the information I give and help me visualize what it is you
+                a(href='#') think I want.
+              p
+                | I want everything we do to be beautiful. I don’t give a damn whether the client understands that that’s worth anything, or that the client thinks it’s worth anything, or whether it is worth anything. It’s worth it to me. It’s the way I want to live my life. I want to make beautiful things, even if nobody cares.
+              p
+                | Inspiration is hogwash. My work comes directly out of my loves and hates. Muses don’t whisper in my ear, and ideas don’t flow over my body like a cool rain.
+                br
+                | Functionality is so over-valued in design, and we’ve kept design very small in that way. Functionality is the sheer minimum. If your house burns down, what do you take? The cat in the window that you got from your mother, or the chair you have?
+            .share
+              img(src='images/share.png', alt='share')
+            .other-posts
+              a.prev(href='#')
+                | ← Learn Rails in 30 days
+              a.next.pull-right(href='#')
+                | Take care of yourself →
+    #footer
+      .container
+        .row
+          .col-md-3.copyright
+            | React © 2014
+          .col-md-6.menu
+            ul
+              li.active
+                a(href='features.html') Features
+              li
+                a(href='services.html') Services
+              li
+                a(href='pricing.html') Pricing
+              li
+                a(href='support.html') Support
+              li
+                a(href='blog.html') Blog
+          .col-md-3.social
+            a(href='#')
+              img(src='images/social/social-tw.png', alt='twitter')
+            a(href='#')
+              img(src='images/social/social-dbl.png', alt='dribbble')

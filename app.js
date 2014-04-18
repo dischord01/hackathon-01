@@ -21,6 +21,8 @@ var apiController = require('./controllers/api');
 var contactController = require('./controllers/contact');
 var portalController = require('./controllers/portal');
 var alfrescoController = require('./controllers/alfresco');
+var landingpageController = require('./controllers/landingpage');
+
 /**
  * API keys + Passport configuration.
  */
@@ -103,7 +105,6 @@ app.use(express.errorHandler());
  */
 
 app.get('/', homeController.index);
-app.get('/escape-velocity', homeController.escapeVelocity);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
@@ -141,7 +142,23 @@ app.get('/api/twitter', passportConf.isAuthenticated, passportConf.isAuthorized,
 app.get('/api/venmo', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getVenmo);
 app.post('/api/venmo', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.postVenmo);
 app.get('/api/linkedin', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getLinkedin);
-/* Sollar Edits */
+/* Sollar Edits Unauthenticated */
+app.get('/home', landingpageController.getHome);
+app.get('/features', landingpageController.getFeatures);
+app.get('/services', landingpageController.getServices);
+app.get('/pricing', landingpageController.getPricing);
+app.get('/charts', landingpageController.getCharts);
+app.get('/about_us', landingpageController.getAboutus);
+app.get('/contact_us', landingpageController.getContactus);
+app.get('/support', landingpageController.getSupport);
+app.get('/sign_up', landingpageController.getSignup);
+app.get('/status', landingpageController.getStatus);
+app.get('/docs', landingpageController.getDocs);
+app.get('/blog', landingpageController.getBlog);
+app.get('/blogpost', landingpageController.getBlogpost);
+
+
+/* Sollar Edits Authenticated */
 app.get('/portal', passportConf.isAuthenticated, portalController.getPortal);
 app.get('/alfresco', passportConf.isAuthenticated, alfrescoController.getAlfresco);
 

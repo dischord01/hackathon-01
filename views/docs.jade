@@ -1,0 +1,213 @@
+doctype html
+html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title React - Bootstrap Theme
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    //
+       stylesheets 
+    link(rel='stylesheet', type='text/css', href='css/compiled/theme.css')
+    link(rel='stylesheet', type='text/css', href='css/vendor/animate.css')
+    link(rel='stylesheet', type='text/css', href='http://yandex.st/highlightjs/8.0/styles/default.min.css')
+    //
+       javascript 
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(src='js/bootstrap/bootstrap.min.js')
+    script(src='js/theme.js')
+    script(src='http://yandex.st/highlightjs/8.0/highlight.min.js')
+    //if lt IE 9
+      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+  body#docs(data-spy='scroll', data-target='#guide')
+    #guide
+      h1.logo
+        a(href='index.html') React
+      ul.menu.nav
+        li
+          a(href='#intro') Introduction
+        li
+          a(href='#auth') Authentication
+        li
+          a(href='#games') Games
+          ul.nav
+            li
+              a(href='#js-individual-compiled') Retrieve a Game
+            li
+              a(href='#js-data-attrs') Create a Game
+            li
+              a(href='#js-programmatic-api') Delete a Game
+        li
+          a(href='#users') Users
+          ul.nav
+            li
+              a(href='#users') Retrieve a User
+            li
+              a(href='#users') Create a User
+            li
+              a(href='#users') Delete a User
+        li
+          a(href='#orders') Orders
+        li
+          a(href='#errors') Errors
+    #api-docs
+      #methods
+        .languages
+          a.language.selected(data-lang='ruby', href='#') Ruby
+          a.language(data-lang='python', href='#') Python
+          a.language(data-lang='php', href='#') PHP
+        #intro.method
+          .method-section.clearfix
+            .method-description
+              h3 Introduction
+              p
+                | This is a documentation page demo for
+                a(href='http://en.wikipedia.org/wiki/Application_programming_interface') an API
+                | , you can use it for your own purposes if you want to showcase your API or some other kind of documentation for your app.
+                | The info shown here is merely for the demo so it is not real.
+              p
+                | You can edit the code with anything you like and use only the languages that you want, the code syntax highlighting is made using
+                a(href='http://highlightjs.org', target='_blank') highlightjs.org
+                | and supports a good
+                | variety of languages. Comes with some color schemes by default but you can easily customize the scheme of each language directly from the CSS.
+            .method-example
+              pre.
+                \n                
+                                
+        #auth.method
+          .method-section.clearfix
+            .method-description
+              h3 Authentication
+              p
+                | It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            .method-example
+              pre.
+                \n                
+                                
+        #games.method
+          .method-section.clearfix
+            .method-description
+              h3 Games
+              p
+                | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              p
+                | It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              .info
+                h4 The Game Object
+                .field.clearfix
+                  .key name:
+                  .desc
+                    strong string
+                    | The name of the game
+                .field.clearfix
+                  .key company:
+                  .desc
+                    strong string
+                    | The name of the company creator
+                .field.clearfix
+                  .key some_key:
+                  .desc
+                    strong string
+                .field.clearfix
+                  .key rating:
+                  .desc
+                    strong integer
+                    | The rating of the game from 0 to 100.
+                .field.clearfix
+                  .key description:
+                  .desc
+                    strong hash
+                    | key/value pairs with fields that describe the game.
+            .method-example
+              pre.
+                \n                
+                                
+                                
+        #users.method
+          .method-section.clearfix
+            .method-description
+              h3 Users
+              p
+                | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              .info
+                h4 The User Object
+                .field.clearfix
+                  .key name:
+                  .desc
+                    strong string
+                    | The name of the user
+                .field.clearfix
+                  .key email:
+                  .desc
+                    strong string
+                    | The email of the user
+                .field.clearfix
+                  .key country:
+                  .desc
+                    strong string
+                    | 2 letter code for the country
+                .field.clearfix
+                  .key age:
+                  .desc
+                    strong integer
+                    | Age of the user
+                .field.clearfix
+                  .key description:
+                  .desc
+                    strong hash
+                    | key/value pairs with fields that describe the user.
+            .method-example
+              pre.
+                \n                
+                                
+                                
+        #orders.method
+          .method-section.clearfix
+            .method-description
+              h3 Orders
+              p
+                | It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            .method-example
+              pre.
+                \n                
+                                
+                                
+        #errors.method
+          .method-section.clearfix
+            .method-description
+              h3 Errors
+              p
+                | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              .info
+                h4 Attributes
+                .field.clearfix
+                  .key code:
+                  .desc
+                    strong string
+                    | Code of the error
+                .field.clearfix
+                  .key message:
+                  .desc
+                    strong string
+                    | A complete message with details about the error to show users.
+            .method-example
+              pre.
+                \n                
+                                
+    script.
+      $(function () {
+      hljs.configure({
+      tabReplace: '  ',
+      classPrefix: ''
+      })
+      hljs.initHighlightingOnLoad();
+      // language toggle
+      var $languages = $(".languages .language");
+      $languages.click(function (e) {
+      e.preventDefault();
+      var lang = $(this).data("lang");
+      $languages.removeClass("selected");
+      $(this).addClass("selected");
+      $("pre code").hide();
+      $("pre code." + lang).css("display", "block");
+      });
+      });

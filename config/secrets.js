@@ -50,8 +50,8 @@ module.exports = {
 
   googleAuth: true,
   google: {
-    clientID: process.env.GOOGLE_ID || 'Your Client ID',
-    clientSecret: process.env.GOOGLE_SECRET || 'Your Client Secret',
+    clientID: process.env.GOOGLE_ID || '76874866026-frgvermuj74bcgtedgn8vatpgjnrftlv.apps.googleusercontent.com',
+    clientSecret: process.env.GOOGLE_SECRET || 'gebn6bRRamgtAOTJCF-W6n-T',
     callbackURL: '/auth/google/callback',
     passReqToCallback: true
   },

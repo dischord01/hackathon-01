@@ -1,0 +1,101 @@
+doctype html
+html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title #{title} | Project 01
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    //
+       stylesheets 
+    link(rel='stylesheet', type='text/css', href='css/compiled/theme.css')
+    link(rel='stylesheet', type='text/css', href='css/vendor/animate.css')
+    link(rel='stylesheet', type='text/css', href='css/vendor/flexslider.css')
+    //
+       javascript 
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(src='js/bootstrap/bootstrap.min.js')
+    script(src='js/vendor/jquery.flexslider.min.js')
+    script(src='js/theme.js')
+    //if lt IE 9
+      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+  body#about-us
+    // Navigation Normal 
+    include partials/lp_navigation_normal
+    //Content
+    #slider
+      .container
+        .row.header
+          .col-md-12
+            h3 About React Themes
+            p
+              | You have to roll up your sleeves and be a stonecutter before you can become a sculptor – command of craft always precedes art.
+        .row
+          .col-md-12
+            .flexslider
+              ul.slides
+                li
+                  img(src='images/office2.png', alt='office2')
+                li
+                  img(src='images/office1.png', alt='office1')
+                li
+                  img(src='images/office3.png', alt='office3')
+    #info
+      .container
+        .row
+          .col-md-12
+            h1 We care about our work
+        .row
+          .col-md-6
+            p
+              | Whether you want to fill this paragraph with some text like I'm doing right now, this place is perfect to describe some features or anything you want - React has a complete solution for you.
+            p
+              | You have complete control over the look & feel of your website, we offer the best quality so you take your site up and running in no time.
+          .col-md-6
+            p
+              | React is a simple, developer-friendly way to get your site. Full of features, cool documentation ease of use, lots of pages. We want to help bringing cool stuff to people so they can get their projects faster.
+            a.join-team.button.button-small(href='#') Join our team
+        .row.stats
+          .col-sm-3
+            strong 13
+            | employees
+          .col-sm-3
+            strong 10k
+            | customers
+          .col-sm-3
+            strong 9
+            | template pages
+          .col-sm-3
+            strong 13k
+            | products sold
+        .row.team
+          .col-md-12.team-row
+            img(src='images/testimonials/testimonial1.jpg', data-toggle='tooltip', title='Eric Smith - CEO', alt='testimonial')
+            img(src='images/testimonials/testimonial2.jpg', data-toggle='tooltip', title='Rachel Dawes - PM', alt='testimonial')
+            img(src='images/testimonials/testimonial3.jpg', data-toggle='tooltip', title='Henry Hill - Developer', alt='testimonial')
+            img(src='images/testimonials/testimonial4.jpg', data-toggle='tooltip', title='Ana Rich - Designer', alt='testimonial')
+            img(src='images/testimonials/testimonial7.jpg', data-toggle='tooltip', title='Jessica Welch - Designer', alt='testimonial')
+            img(src='images/testimonials/testimonial8.jpg', data-toggle='tooltip', title='Charly - iOS Developer', alt='testimonial')
+          .col-md-12.team-row
+            img(src='images/testimonials/testimonial5.jpg', data-toggle='tooltip', title='Karen Stewart - PM', alt='testimonial')
+            img(src='images/testimonials/testimonial4.jpg', data-toggle='tooltip', title='Charly - iOS Developer', alt='testimonial')
+            img(src='images/testimonials/testimonial7.jpg', data-toggle='tooltip', title='Jessica Welch - Designer', alt='testimonial')
+            img(src='images/testimonials/testimonial8.jpg', data-toggle='tooltip', title='John Raynolds - UI/UX', alt='testimonial')
+            img(src='images/testimonials/testimonial3.jpg', data-toggle='tooltip', title='Henry Hill - Developer', alt='testimonial')
+            img(src='images/testimonials/testimonial2.jpg', data-toggle='tooltip', title='Rachel Dawes - PM', alt='testimonial')
+    #cta
+      .container
+        .row
+          .col-md-12
+            .wrapper.clearfix
+              h4 Try React now and take your own project to a whole new level.
+              a.button.button-small(href='signup.html') Sign up free
+    //Footer Normal
+    include partials/lp_footer_normal
+            script.
+              $(function() {
+              $('.flexslider').flexslider({
+              directionNav: false,
+              slideshowSpeed: 4000
+              });
+              $('[data-toggle="tooltip"]').tooltip();
+              });

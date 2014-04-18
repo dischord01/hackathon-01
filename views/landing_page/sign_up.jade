@@ -1,0 +1,59 @@
+doctype html
+html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title React - Bootstrap Theme
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    //
+       stylesheets 
+    link(rel='stylesheet', type='text/css', href='css/compiled/theme.css')
+    //
+       javascript 
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(src='js/bootstrap/bootstrap.min.js')
+    script(src='js/theme.js')
+    //if lt IE 9
+      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+  body#signup
+    .container
+      .row.header
+        .col-md-12
+          h3.logo
+            a(href='index.html') React
+          h4 Set up your new account today.
+          p
+            | 30-day money-back guarantee that starts after your first payment.
+      .row
+        .col-md-12
+          .wrapper.clearfix
+            .formy
+              .row
+                .col-md-12
+                  form(role='form')
+                    .form-group
+                      label(for='name') Your name
+                      input#name.form-control(type='text')
+                    .form-group
+                      label(for='email') Email address
+                      input#email.form-control(type='email')
+                    .form-group
+                      label(for='password') Password
+                      input#password.form-control(type='password')
+                    .checkbox
+                      label
+                        input(type='checkbox')
+                        | You have read & agree to the
+                        a(href='#') Terms of service
+                        | .
+                    .submit
+                      a.button-clear(href='index.html')
+                        span Create my account
+          .already-account
+            | Already have an account?
+            a(href='signin.html', data-toggle='popover', data-placement='top', data-content='Go to sign in!', data-trigger='manual') Sign in here
+    script.
+      $(function () {
+      $(".already-account a").popover();
+      $(".already-account a").popover('show');
+      });

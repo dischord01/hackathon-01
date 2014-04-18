@@ -1,0 +1,187 @@
+doctype html
+html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title React - Bootstrap Theme
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    //
+       stylesheets 
+    link(rel='stylesheet', type='text/css', href='css/compiled/theme.css')
+    link(rel='stylesheet', type='text/css', href='css/vendor/brankic.css')
+    link(rel='stylesheet', type='text/css', href='css/vendor/animate.css')
+    //
+       javascript 
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(src='js/bootstrap/bootstrap.min.js')
+    script(src='js/theme.js')
+    //if lt IE 9
+      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+  body#services
+    // Navigation Normal 
+    include partials/lp_navigation_normal
+    //Content
+    #hero
+      .container
+        .row(style='overflow: hidden;')
+          .col-md-6.image
+            img.img-responsive.animated.fadeInUp(src='images/services1.png', alt='services1')
+          .col-md-6.info
+            h3 Here is everything we offer
+            p
+              | You will find a variety of ways to present your services such as grids and lists.
+              br
+              | We plan to update this product with more pages and features as we keep on going.
+    #tabs
+      .container
+        .row
+          .col-md-12.hexagons
+            .hexagon.active
+              span.icon.brankic-monitor
+            .hexagon
+              span.icon.brankic-phone
+            .hexagon
+              span.icon.brankic-lamp3
+            .hexagon
+              span.icon.brankic-pictures3
+            .hexagon
+              span.icon.brankic-upload2
+            .hexagon
+              span.icon.brankic-tools
+        .row
+          .col-md-12
+            .sections
+              .section.active
+                h4 Web Development
+                p
+                  | Whether you want to fill this paragraph with some text like I'm doing right now, this place is perfect to describe some features or anything you want - React has a complete solution for you.
+                p
+                  | Chances are, unless I’m a designer, I don’t know what I want. All I know is I want something functional that looks good, is comparable with my competitors, and features constant colour schemes for branding.
+              .section
+                h4 Frontend development
+                p
+                  | I love making the stuff, that’s sort of the core of it. I love creating the stuff. It’s so satisfying to get from the beginning to the end, from a shaky nothing idea to something that’s well formed and the audience really likes. It’s like a drug: You keep trying to do it again and again and again. I’ve learned from experience that if you work harder at it, and apply more energy and time to it, and more consistency, you get a better result. It comes from the work.
+                  br
+                  | This thing will work on any device, it has a very easy to understand documentation and is made with SASS.
+              .section
+                h4 Responsive web design
+                p
+                  | We're always happy to offer support if you happen to have any doubts about anything, if you need some new stuff contact us.
+                p
+                  | You have to roll up your sleeves and be a stonecutter before you can become a sculptor – command of craft always precedes art: apprentice, journeyman, master.
+                  br
+                  | It doesn’t matter one damn bit whether fashion is art or not. You don’t question whether an incredible chef is an artist or not – his cakes are delicious and that’s all that matters.
+              .section
+                h4 HTML & CSS Development
+                p
+                  | Well you’re in your little room and you’re working on something good but if it’s really good you’re gonna need a bigger room and when you’re in the bigger room you might not know what to do you might have to think of how you got started sitting in your little room.
+                p
+                  | We're always happy to offer support if you happen to have any doubts about anything, if you need some new stuff contact us.
+              .section
+                h4 Photoshop Mockups
+                p
+                  | I want everything we do to be beautiful. I don’t give a damn whether the client understands that that’s worth anything, or that the client thinks it’s worth anything, or whether it is worth anything. It’s worth it to me. It’s the way I want to live my life. I want to make beautiful things, even if nobody cares.
+                p
+                  | We'll be adding some new stuff to make it even more awesome, if you have any idea please let us know.
+              .section
+                h4 Retina display
+                p
+                  | Functionality is so over-valued in design, and we’ve kept design very small in that way. Functionality is the sheer minimum. If your house burns down, what do you take? The cat in the window that you got from your mother, or the chair you have?
+                p
+                  | Simply are looking to sell digital goods or are interested in drop shipping — React has a complete solution in this.
+    #grid-first
+      .container
+        .row.header
+          h3 Never sold online before? It's fast and easy.
+          p
+            | React is perfect for novice developers and experts alike.
+        .row.sections
+          .col-md-4
+            .section
+              .pic
+                img.img-responsive(src='images/services2.png', alt='services2')
+              .info
+                strong Awesome mobile app
+                p
+                  | You can work with international customers right out of the box while staying in your country.
+          .col-md-4
+            .section
+              .pic
+                img.img-responsive(src='images/services4.png', alt='services4')
+              .info
+                strong Awesome mobile app
+                p
+                  | You can work with international customers right out of the box while staying in your country.
+          .col-md-4
+            .section
+              .pic
+                img.img-responsive(src='images/services3.png', alt='services3')
+              .info
+                strong Awesome mobile app
+                p
+                  | You can work with international customers right out of the box while staying in your country.
+    #grid-second
+      .container
+        .row.header
+          .col-md-12
+            h3 Flexibility built in
+            p
+              | You can work with international customers right out of the box while staying in your country.
+        .row.features
+          .col-md-6.feature
+            img(src='images/circle-icons/full-color/globe.png', alt='globe')
+            .info
+              strong Act locally, work globally
+              p
+                | You can work with international customers right out of the box while staying in your country.
+          .col-md-6.feature
+            img(src='images/circle-icons/full-color/location.png', alt='location')
+            .info
+              strong Act globally, work as usual
+              p
+                | With some customization you can make this product apply to your branding guidelines and amaze your customers at the same time.
+        .row.features
+          .col-md-6.feature
+            img(src='images/circle-icons/full-color/smartphone.png', alt='smartphone')
+            .info
+              strong Act globally, work as usual
+              p
+                | We don't impose any design restrictions, you are free to customize it as you see fit and it's easy to use.
+          .col-md-6.feature
+            img(src='images/circle-icons/full-color/support.png', alt='support')
+            .info
+              strong Develop once, run everywhere
+              p
+                | We'll be adding some new stuff to make it even more awesome, if you have any idea please let us know.
+    #features-hover
+      .container
+        .row
+          .col-md-12.images
+            img.img-responsive.active(src='images/services5.png', alt='services5')
+            img.img-responsive(src='images/services6.png', alt='services6')
+            img.img-responsive(src='images/services7.png', alt='services7')
+        .row.features
+          .col-md-4
+            .feature.active
+              strong Your own dashboard
+              p
+                | You can work with international customers right out of the box while staying in your country.
+          .col-md-4
+            .feature
+              strong Showcase your landing page
+              p
+                | You can work with international customers right out of the box while staying in your country.
+          .col-md-4
+            .feature
+              strong Offer pricing plans
+              p
+                | You can work with international customers right out of the box while staying in your country.
+    #cta
+      .container
+        .row
+          .col-md-12
+            .wrapper.clearfix
+              h4 Try React now and take template design to a whole new level.
+              a.button.button-small(href='#') Sign up free
+    //Footer Normal
+    include partials/lp_footer_normal

@@ -1,0 +1,116 @@
+doctype html
+html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title React - Bootstrap Theme
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    //
+       stylesheets 
+    link(rel='stylesheet', type='text/css', href='css/compiled/theme.css')
+    //
+       javascript 
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(src='js/bootstrap/bootstrap.min.js')
+    script(src='js/theme.js')
+    //if lt IE 9
+      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+  body#status
+    // Navigation Normal 
+    include partials/lp_navigation_normal
+    //Content
+    #update
+      .container
+        .row.header
+          h3 React System Status
+          p Current status and incident report
+        .row
+          .col-md-12
+            .current-status
+              span.updated
+                | Updated 2 minutes ago
+              .status
+                .color.green
+                | All sistems operational
+              .help
+                | Need help?
+                a(href='contactus.html') Contact us
+                | .
+        .row
+          .col-md-12
+            .panel.panel-default.modules
+              //
+                 List group 
+              ul.list-group
+                li.list-group-item
+                  | Web API
+                  .status Operational
+                li.list-group-item
+                  | Notifications
+                  .status.down Down
+                li.list-group-item
+                  | Application Monitoring
+                  .status Operational
+                li.list-group-item
+                  | Browser Plugin
+                  .status Operational
+                //
+                   <li class="list-group-item">
+                                  Backoffice Administration
+                                  <div class="status">Operational</div>
+                                </li> 
+        .row
+          .col-md-12
+            .messages
+              h3 Messages
+              .date
+                .day Today
+                p.ok
+                  | All systems operational
+              .date
+                .day Yesterday, October 25 2013
+                p.ok
+                  | All systems operational
+              .date
+                .day October 04 2013
+                p.ok
+                  | All systems operational
+              .date
+                .day October 03 2013
+                p.ok
+                  | All systems operational
+              .date
+                .day October 02 2013
+                p.issues
+                  | Application deployment issues
+                p.update
+                  strong Resolved:
+                  | We fixed the issues monitoring status, downtime was between 1pm and 5pm PT.
+                p.update
+                  strong Investigating:
+                  | We identified some issues deploying some applications and monitoring their status.
+            .full-history
+              a(href='#')
+                | ← See full incident history
+    //Footer Normal
+    include partials/lp_footer_normal
+    
+    script.
+      $(function () {
+      // Update the status color every 2 seconds, for demo only
+      // You can remove this!
+      var $status = $(".status .color"),
+      colors = ["green", "yellow", "red"],
+      currentStatus = 0;
+      function updateStatus() {
+      currentStatus++;
+      if (currentStatus >= 3) {
+      currentStatus = 0;
+      }
+      color = colors[currentStatus];
+      $status.removeClass().addClass("color").addClass(color);
+      }
+      setInterval(function () {
+      updateStatus();
+      }, 2000);
+      });

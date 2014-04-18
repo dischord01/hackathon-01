@@ -1,0 +1,225 @@
+doctype html
+html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title React - Bootstrap Theme
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    //
+       stylesheets 
+    link(rel='stylesheet', type='text/css', href='css/compiled/theme.css')
+    link(rel='stylesheet', type='text/css', href='css/vendor/font-awesome.css')
+    link(rel='stylesheet', type='text/css', href='css/vendor/icomoon.css')
+    //
+       javascript 
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(src='js/bootstrap/bootstrap.min.js')
+    script(src='js/theme.js')
+    //if lt IE 9
+      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+  body#blog
+    header.navbar.navbar-inverse.normal(role='banner')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-navbar-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='index.html') React
+        nav.collapse.navbar-collapse.bs-navbar-collapse(role='navigation')
+          ul.nav.navbar-nav
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Home alts
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='index.html') Home 1 (Static)
+                li
+                  a(href='index3.html') Home 2 (Sidebar menu)
+                li
+                  a(href='index4.html') Home 3 (Slider)
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Showcase
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='features.html') Features
+                li
+                  a(href='services.html') Services
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Pricing
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='pricing.html') Pricing charts
+                li
+                  a(href='charts.html') Comparison tables
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | More pages
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='aboutus.html') About us
+                li
+                  a(href='contactus.html') Contact us
+                li
+                  a(href='gallery.html') Gallery
+                li
+                  a(href='portfolio.html') Portfolio
+                li
+                  a(href='portfolio-item.html') Portfolio Item
+                li
+                  a(href='invoice.html') Invoice page
+                li
+                  a(href='timeline.html') Timeline Page
+                li
+                  a(href='docs.html') API Documentation
+                li
+                  a(href='support.html') Support
+                li
+                  a(href='coming-soon.html') Coming Soon
+                li
+                  a(href='status.html') Status
+                li
+                  a(href='signup.html') Sign Up & Sign In
+                li
+                  a(href='signup-rotate.html') Sign Up Miscellaneous
+                li
+                  a(href='404.html') 404 Page
+            li.active.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Blog
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='blog.html') Blog 
+                li
+                  a(href='blogpost.html') Blog post
+          ul.nav.navbar-nav.navbar-right.visible-md.visible-lg
+            li
+              a.button(href='signup.html') Sign up free
+    #posts
+      .container
+        .row
+          .col-md-9
+            .post
+              a.pic(href='blogpost.html')
+                img.img-responsive(src='images/blogpost1.png', alt='blogpost')
+              .title
+                a(href='blogpost.html') A brief history of climate science
+              .author
+                img.avatar(src='images/testimonials/testimonial2.jpg', alt='author')
+                | Jessica Smith, October 03, 2013
+              p.intro
+                | By Ed Hawkins, University of Reading. Climate change is often seen as a recent phenomenon, but its roots are actually far older — the stuff that is currently happening is beyond my understanding.
+                br
+                | Some people say design is about solving problems. Obviously designers solve problems but so do dentists. Design is about cultural invention.
+              a.continue-reading(href='blogpost.html') Continue reading this post
+            .post
+              .video
+                .iframe-wrapper
+                  iframe(src='http://player.vimeo.com/video/22439234', width='620', height='350', frameborder='0', webkitallowfullscreen='webkitallowfullscreen', mozallowfullscreen='mozallowfullscreen', allowfullscreen='allowfullscreen')
+              .title
+                a(href='blogpost.html') Discover what is beyond our Solar System
+              .author
+                img.avatar(src='images/testimonials/testimonial1.jpg', alt='author')
+                | Eric Hoffman, October 11, 2013
+              p.intro
+                | By Ed Hawkins, University of Reading. Climate change is often seen as a recent phenomenon, but its roots are actually far older — the stuff that is currently happening is beyond my understanding.
+                br
+                | Some people say design is about solving problems. Obviously designers solve problems but so do dentists. Design is about cultural invention.
+              a.continue-reading(href='blogpost.html') Continue reading this post
+            .post
+              a.pic(href='blogpost.html')
+                img.img-responsive(src='images/blogpost2.png', alt='blogpost')
+              .title
+                a(href='blogpost.html') How to get really good at programming
+              .author
+                img.avatar(src='images/testimonials/testimonial4.jpg', alt='author')
+                | Amanda Johnson, September 23, 2013
+              p.intro
+                | By Ed Hawkins, University of Reading. Climate change is often seen as a recent phenomenon, but its roots are actually far older — the stuff that is currently happening is beyond my understanding.
+              a.continue-reading(href='blogpost.html') Continue reading this post
+            .post
+              a.pic(href='blogpost.html')
+                img.img-responsive(src='images/blogpost3.png', alt='blogpost')
+              .title
+                a(href='blogpost.html') Get healthy riding a bicycle everyday
+              .author
+                img.avatar(src='images/testimonials/testimonial3.jpg', alt='author')
+                | Benjamin Andrews, August 16, 2013
+              p.intro
+                | By Ed Hawkins, University of Reading. Climate change is often seen as a recent phenomenon, but its roots are actually far older — the stuff that is currently happening is beyond my understanding.
+                br
+                | Some people say design is about solving problems. Obviously designers solve problems but so do dentists. Design is about cultural invention.
+              a.continue-reading(href='blogpost.html') Continue reading this post
+            .pages
+              ul.pagination
+                li
+                  a(href='#') «
+                li.active
+                  a(href='#') 1
+                li
+                  a(href='#') 2
+                li
+                  a(href='#') 3
+                li
+                  a(href='#') 4
+                li
+                  a(href='#') »
+          .col-md-3.sidebar
+            .search
+              form
+                span.icomoon-search
+                input(type='text', name='q', placeholder='Search on blog...')
+            .updates
+              strong
+                | Free blog updates
+                i.fa.fa-rss
+              p
+                | Never miss an update.
+                | Sign up  to receieve an email whenever we post something in the blog.
+            .follow-tw
+              img(src='images/twitterfollow.png', alt='follow-tw')
+            .best-hits
+              strong Check out our best hits:
+              a(href='#') How to start a business
+              a(href='#') How to sell online
+              a(href='#') Climate change when needed
+              a(href='#') Web development upstart
+              a(href='#') Learn Rails in 30 days
+    #footer
+      .container
+        .row
+          .col-sm-3.copyright
+            | React © 2014
+          .col-sm-6.menu
+            ul
+              li
+                a(href='features.html') Features
+              li
+                a(href='services.html') Services
+              li
+                a(href='pricing.html') Pricing
+              li
+                a(href='support.html') Support
+              li.active
+                a(href='blog.html') Blog
+          .col-sm-3.social
+            a(href='#')
+              img(src='images/social/social-tw.png', alt='twitter')
+            a(href='#')
+              img(src='images/social/social-dbl.png', alt='dribbble')
+    script(type='text/javascript')
+      $(function () {
+      $(".search input:text").focus(function () {
+      $(".icomoon-search").addClass("active");
+      });
+      $(".search input:text").blur(function () {
+      $(".icomoon-search").removeClass("active");
+      });
+      });

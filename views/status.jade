@@ -1,0 +1,216 @@
+doctype html
+html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title React - Bootstrap Theme
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    //
+       stylesheets 
+    link(rel='stylesheet', type='text/css', href='css/compiled/theme.css')
+    //
+       javascript 
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(src='js/bootstrap/bootstrap.min.js')
+    script(src='js/theme.js')
+    //if lt IE 9
+      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+  body#status
+    header.navbar.navbar-inverse.normal(role='banner')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-navbar-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='index.html') React
+        nav.collapse.navbar-collapse.bs-navbar-collapse(role='navigation')
+          ul.nav.navbar-nav
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Home alts
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='index.html') Home 1 (Static)
+                li
+                  a(href='index3.html') Home 2 (Sidebar menu)
+                li
+                  a(href='index4.html') Home 3 (Slider)
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Showcase
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='features.html') Features
+                li
+                  a(href='services.html') Services
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Pricing
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='pricing.html') Pricing charts
+                li
+                  a(href='charts.html') Comparison tables
+            li.active.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | More pages
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='aboutus.html') About us
+                li
+                  a(href='contactus.html') Contact us
+                li
+                  a(href='gallery.html') Gallery
+                li
+                  a(href='portfolio.html') Portfolio
+                li
+                  a(href='portfolio-item.html') Portfolio Item
+                li
+                  a(href='invoice.html') Invoice page
+                li
+                  a(href='timeline.html') Timeline Page
+                li
+                  a(href='docs.html') API Documentation
+                li
+                  a(href='support.html') Support
+                li
+                  a(href='coming-soon.html') Coming Soon
+                li
+                  a(href='status.html') Status
+                li
+                  a(href='signup.html') Sign Up & Sign In
+                li
+                  a(href='signup-rotate.html') Sign Up Miscellaneous
+                li
+                  a(href='404.html') 404 Page
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Blog
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='blog.html') Blog 
+                li
+                  a(href='blogpost.html') Blog post
+          ul.nav.navbar-nav.navbar-right.visible-md.visible-lg
+            li
+              a.button(href='signup.html') Sign up free
+    #update
+      .container
+        .row.header
+          h3 React System Status
+          p Current status and incident report
+        .row
+          .col-md-12
+            .current-status
+              span.updated
+                | Updated 2 minutes ago
+              .status
+                .color.green
+                | All sistems operational
+              .help
+                | Need help?
+                a(href='contactus.html') Contact us
+                | .
+        .row
+          .col-md-12
+            .panel.panel-default.modules
+              //
+                 List group 
+              ul.list-group
+                li.list-group-item
+                  | Web API
+                  .status Operational
+                li.list-group-item
+                  | Notifications
+                  .status.down Down
+                li.list-group-item
+                  | Application Monitoring
+                  .status Operational
+                li.list-group-item
+                  | Browser Plugin
+                  .status Operational
+                //
+                   <li class="list-group-item">
+                                  Backoffice Administration
+                                  <div class="status">Operational</div>
+                                </li> 
+        .row
+          .col-md-12
+            .messages
+              h3 Messages
+              .date
+                .day Today
+                p.ok
+                  | All systems operational
+              .date
+                .day Yesterday, October 25 2013
+                p.ok
+                  | All systems operational
+              .date
+                .day October 04 2013
+                p.ok
+                  | All systems operational
+              .date
+                .day October 03 2013
+                p.ok
+                  | All systems operational
+              .date
+                .day October 02 2013
+                p.issues
+                  | Application deployment issues
+                p.update
+                  strong Resolved:
+                  | We fixed the issues monitoring status, downtime was between 1pm and 5pm PT.
+                p.update
+                  strong Investigating:
+                  | We identified some issues deploying some applications and monitoring their status.
+            .full-history
+              a(href='#')
+                | ← See full incident history
+    #footer
+      .container
+        .row
+          .col-sm-3.copyright
+            | React LLC 2014
+          .col-sm-6.menu
+            ul
+              li.active
+                a(href='features.html') Features
+              li
+                a(href='services.html') Services
+              li
+                a(href='pricing.html') Pricing
+              li
+                a(href='support.html') Support
+              li
+                a(href='blog.html') Blog
+          .col-sm-3.social
+            a(href='#')
+              img(src='images/social/social-tw.png', alt='twitter')
+            a(href='#')
+              img(src='images/social/social-dbl.png', alt='dribbble')
+    script.
+      $(function () {
+      // Update the status color every 2 seconds, for demo only
+      // You can remove this!
+      var $status = $(".status .color"),
+      colors = ["green", "yellow", "red"],
+      currentStatus = 0;
+      function updateStatus() {
+      currentStatus++;
+      if (currentStatus >= 3) {
+      currentStatus = 0;
+      }
+      color = colors[currentStatus];
+      $status.removeClass().addClass("color").addClass(color);
+      }
+      setInterval(function () {
+      updateStatus();
+      }, 2000);
+      });
