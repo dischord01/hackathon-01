@@ -42,24 +42,24 @@ module.exports = {
 
   twitterAuth: true,
   twitter: {
-    consumerKey: process.env.TWITTER_KEY || 'Your Consumer Key',
-    consumerSecret: process.env.TWITTER_SECRET  || 'Your Consumer Secret',
+    consumerKey: process.env.TWITTER_KEY || 'oTZU1cA1Hs5wAUM2HVTH8wg4B',
+    consumerSecret: process.env.TWITTER_SECRET  || 'QhTylbmmOtvSwqiRmdqqNQUNcfbmZg41MCwclwyjwkTKPlbGIa',
     callbackURL: '/auth/twitter/callback',
     passReqToCallback: true
   },
 
   googleAuth: true,
   google: {
-    clientID: process.env.GOOGLE_ID || '76874866026-frgvermuj74bcgtedgn8vatpgjnrftlv.apps.googleusercontent.com',
-    clientSecret: process.env.GOOGLE_SECRET || 'gebn6bRRamgtAOTJCF-W6n-T',
+    clientID: process.env.GOOGLE_ID || '76874866026-pdrb0smcf501pfiamsgs2n1fbbp6nrnt.apps.googleusercontent.com',
+    clientSecret: process.env.GOOGLE_SECRET || '6WL5sOEZzp9Fz10sJkKfCvI9',
     callbackURL: '/auth/google/callback',
     passReqToCallback: true
   },
 
   linkedinAuth: true,
   linkedin: {
-    clientID: process.env.LINKEDIN_ID || 'Your Client ID',
-    clientSecret: process.env.LINKEDIN_SECRET || 'Your Client Secret',
+    clientID: process.env.LINKEDIN_ID || '77msq3ncyf1dbr',
+    clientSecret: process.env.LINKEDIN_SECRET || 'GT9Yuz9CJpUsqDTT',
     callbackURL: '/auth/linkedin/callback',
     scope: ['r_fullprofile', 'r_emailaddress', 'r_network'],
     passReqToCallback: true
